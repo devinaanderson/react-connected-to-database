@@ -37,7 +37,7 @@ export default class ApiPost extends Component {
 
     render() {
         return (
-        <div >
+        <div className='container post-form'>
             <h1>Add a movie and rating:</h1>
             <form onSubmit={this.handleSubmit}>
                 <label>

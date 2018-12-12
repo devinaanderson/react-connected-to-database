@@ -28,17 +28,20 @@ export default class ApiFetch extends Component {
 
   render() {
     return (
-      <div className='api-fetch'>
-        <h2>Here are the current movies:</h2>
-        {this.state.movies.map((data, index) => {
-          return (
-          <div key={index}>
-            <p>Title: {data[0]}</p>
-            <p>Rating: {data[1]}</p>
-          </div>
-          )
-          
-        } )}
+      <div className='container'>
+        <div className='api-fetch-container'>
+          <h2>Here are the current movies:</h2>
+            <div className='movie-cards'>
+                {this.state.movies.map((data, index) => {
+                return (
+                <div key={index} className='movie-card'>
+                  <p>Title: {data[0]}</p>
+                  <p>Rating: {data[1]}</p>
+                </div>
+                )     
+              } )}
+            </div>
+        </div>
       </div>
     );
   }

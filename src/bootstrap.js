@@ -19,9 +19,12 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
         <div>
-          <Link to="/">Home</Link>
-          <Link to="/bananas">See All movies</Link>
-          <Link to="/addmovie">Add a movie!</Link>
+          <div className='nav-bar'>
+            <Link to="/">Home</Link>
+            <Link to="/bananas">See All movies</Link>
+            <Link to="/addmovie">Add a movie!</Link>
+          </div>
+          
 
 
           <Route exact path="/" component={App} />
